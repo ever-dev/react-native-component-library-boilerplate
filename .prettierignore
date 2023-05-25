@@ -1,0 +1,27 @@
+# Vendors
+**/node_modules/
+
+# Build output
+/.next/
+/lib/
+/out/
+/build/
+/public/
+
+# External Sources
+**/vendor/
+
+# Test results
+/.coverage
+/coverage
+/test-results/
+/cypress/
+
+# Cache
+/.eslintcache
+
+# Configs
+/.github/
+
+# storybook
+**/storybook-static

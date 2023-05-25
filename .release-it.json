@@ -1,0 +1,26 @@
+{
+  "git": {
+    "commit": true,
+    "commitMessage": "[skip ci] chore(release): ${version}",
+    "tag": true,
+    "tagName": "v${version}",
+    "push": true
+  },
+  "npm": {
+    "publish": false
+  },
+  "github": {
+    "release": false
+  },
+  "plugins": {
+    "@release-it/conventional-changelog": {
+      "preset": "angular"
+    }
+  },
+  "hooks": {
+    "before:init": ["yarn validate"],
+    "after:bump": ["yarn package:clean", "yarn package:build", "git add ."],
+    "after:git:release": "echo After git push, before github release",
+    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
+  }
+}

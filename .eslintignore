@@ -1,0 +1,18 @@
+# Vendors
+node_modules
+
+# Build output
+**/lib/**
+**/build/**
+**/public/**
+
+# Test results
+**/.coverage/**
+**/coverage/**
+**/test-results/**
+
+# storybook
+**/storybook-static
+
+# type definitions
+*.d.ts
